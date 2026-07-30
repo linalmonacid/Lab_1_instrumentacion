@@ -17,6 +17,7 @@ Evaluar la influencia del habla sobre el patrón y la frecuencia respiratoria me
 
 ### Metodología  
 Para el desarrollo de esta práctica se implementó un sistema de adquisición de la señal respiratoria utilizando una placa ESP32 y un sensor de dióxido de carbono (CO₂). Este tipo de sistema permite registrar las variaciones en la concentración de CO₂ presentes en el aire exhalado durante la respiración, las cuales pueden relacionarse con el patrón respiratorio y utilizarse para estimar la frecuencia respiratoria [1].  
+
 El principio de funcionamiento del sistema se basa en que el aire exhalado contiene una concentración de dióxido de carbono considerablemente mayor que el aire ambiente. Debido a esto, cuando una persona exhala cerca del sensor, este detecta el incremento en la concentración de CO₂ y genera una variación en su señal de salida. Durante la inhalación ocurre el efecto contrario, ya que disminuye la cantidad de CO₂ detectada, permitiendo obtener una señal que representa los ciclos respiratorios [2].  
 
 Antes de iniciar la adquisición de datos, se realizó el montaje del sistema conectando el sensor de CO₂ a la placa ESP32 de acuerdo con las especificaciones del fabricante y verificando que todas las conexiones eléctricas fueran correctas. Posteriormente, el sensor se ubicó a una distancia corta de la nariz y la boca del sujeto de prueba, procurando que el aire exhalado llegara directamente al elemento sensor sin necesidad de contacto físico, lo que permitió registrar las variaciones producidas durante cada respiración [2].  
