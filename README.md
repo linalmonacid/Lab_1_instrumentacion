@@ -26,6 +26,20 @@ Con el montaje terminado, el sujeto permaneció en reposo para reducir movimient
 
 
 ### Discusión   
+1. ¿Son los patrones respiratorios y las frecuencias respiratorias iguales o diferentes en cada caso? ¿A qué se debe esto?
+
+No, los patrones respiratorios y la frecuencia respiratoria no fueron iguales en las dos condiciones evaluadas (reposo y verbalización). Durante el reposo se observó una respiración más constante y periódica, con ciclos de inhalación y exhalación relativamente uniformes. En cambio, durante la verbalización el patrón respiratorio presentó cambios debido a que el sujeto debía coordinar la respiración con el habla, generando exhalaciones más prolongadas e inhalaciones más cortas y menos frecuentes [1].  
+
+
+Estas diferencias se deben a que la respiración no solo cumple la función de realizar el intercambio de gases, sino que también participa en la producción de la voz. Cuando una persona habla, el sistema respiratorio adapta el ritmo respiratorio para suministrar el flujo de aire necesario durante la fonación, modificando temporalmente la frecuencia y el patrón normal de respiración [2]. Por esta razón, es esperado que las señales respiratorias obtenidas durante la verbalización presenten un comportamiento diferente al registrado en reposo.  
+
+2. ¿Cuáles serían las ventajas y desventajas de emplear múltiples sensores para el monitoreo del proceso respiratorio? ¿Cuáles podrían ser las razones?
+
+El uso de múltiples sensores puede mejorar la calidad del monitoreo respiratorio, ya que permite obtener información desde diferentes variables fisiológicas. Por ejemplo, un sensor de CO₂ puede complementarse con sensores de flujo de aire, temperatura o movimiento torácico para obtener una descripción más completa del proceso respiratorio y aumentar la confiabilidad de las mediciones [3].  
+
+Sin embargo, utilizar varios sensores también presenta algunas desventajas. En primer lugar, aumenta el costo del sistema y la complejidad del montaje. Además, es necesario sincronizar correctamente las señales obtenidas por cada sensor para evitar errores durante el análisis. También puede resultar menos cómodo para el usuario si se requiere colocar varios dispositivos sobre el cuerpo, lo que podría afectar la naturalidad de la respiración y, por lo tanto, influir en los resultados obtenidos [2], [3].  
+
+En general, la elección entre utilizar uno o varios sensores dependerá de la aplicación. Para un monitoreo básico de la frecuencia respiratoria, un solo sensor puede ser suficiente; mientras que para aplicaciones clínicas o de investigación, el uso de múltiples sensores permite obtener información más completa y reducir la posibilidad de errores en la interpretación de la señal.  
 
 ### Conclusiones  
 
@@ -33,3 +47,5 @@ Con el montaje terminado, el sujeto permaneció en reposo para reducir movimient
 [1] Hall, J. E. (2021). Guyton y Hall. Tratado de fisiología médica (14.ª ed.). Elsevier. https://www.elsevier.com/books/guyton-and-hall-textbook-of-medical-physiology/hall/978-0-323-59712-8. 
 
 [2] Universidad Militar Nueva Granada. (2025). Guía de práctica de laboratorio: Monitoreo del patrón y frecuencia respiratoria.   
+
+[3] Webster, J. G., & Clark, J. W. (2010). Medical Instrumentation: Application and Design (4th ed.). John Wiley & Sons. https://www.wiley.com/en-us/Medical+Instrumentation:+Application+and+Design,+4th+Edition-p-9780471676003. 
