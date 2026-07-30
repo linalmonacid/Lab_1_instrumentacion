@@ -15,9 +15,9 @@ Evaluar la influencia del habla sobre el patrón y la frecuencia respiratoria me
 * Procesar y analizar la señal adquirida en Python para obtener el patrón y la frecuencia respiratoria.  
 * Identificar los cambios que se presentan en el patrón respiratorio cuando el sujeto se encuentra en reposo y cuando está hablando.  
 
-### Metodología:  
+### Metodología  
 
-### Preguntas:  
+### Discusión   
 
 ### Conclusiones:  
 
