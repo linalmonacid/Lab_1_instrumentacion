@@ -1,4 +1,4 @@
-# Lab_1_instrumentacion
+# Laboratorio 1: Monitoreo del patrón y frecuencia respiratoria
 ### Integrantes:
 Lina María Cortes Almonacid  
 Karen Dayanna Mora Segura  
@@ -26,7 +26,7 @@ Con el montaje terminado, el sujeto permaneció en reposo para reducir movimient
 
 
 ### Discusión   
-1. ¿Son los patrones respiratorios y las frecuencias respiratorias iguales o diferentes en cada caso? ¿A qué se debe esto?
+###1. ¿Son los patrones respiratorios y las frecuencias respiratorias iguales o diferentes en cada caso? ¿A qué se debe esto?
 
 No, los patrones respiratorios y la frecuencia respiratoria no fueron iguales en las dos condiciones evaluadas (reposo y verbalización). Durante el reposo se observó una respiración más constante y periódica, con ciclos de inhalación y exhalación relativamente uniformes. En cambio, durante la verbalización el patrón respiratorio presentó cambios debido a que el sujeto debía coordinar la respiración con el habla, generando exhalaciones más prolongadas e inhalaciones más cortas y menos frecuentes [1].  
 
