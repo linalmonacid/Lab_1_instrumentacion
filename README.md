@@ -28,7 +28,9 @@ Con el montaje terminado, el sujeto permaneció inicialmente en reposo para redu
 
 
 Las Figuras 1 y 2 muestran las señales registradas durante la respiración en reposo y la respiración durante el habla, respectivamente. Aunque fue posible adquirir la señal mediante el micrófono KY-038 y diferenciar ambas condiciones, la calidad de los registros se vio afectada por la presencia de ruido.
+
 Durante la adquisición de datos fue necesario utilizar tapabocas, lo que produjo turbulencias en el flujo de aire cerca del micrófono y modificó las características acústicas de la respiración. Adicionalmente, el ambiente presentaba diferentes fuentes de ruido que fueron captadas por el sensor, generando fluctuaciones que dificultaron la identificación clara de cada ciclo respiratorio.
+
 A pesar de estas limitaciones, se observa que la respiración durante el habla la señal presenta una mayor amplitud y variabilidad en comparación con la respiración en reposo, comportamiento esperado debido a la producción de la voz y a la modificación del flujo respiratorio durante el habla.
 
 ### Discusión   
