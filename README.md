@@ -10,21 +10,18 @@ Evaluar la influencia del habla sobre el patrón y la frecuencia respiratoria me
 
 
 ### Objetivos específicos  
-* Reconocer las principales variables físicas involucradas en el proceso respiratorio.  
-* Implementar un sistema de adquisición de datos con una ESP32 y un sensor de CO₂ para capturar la señal respiratoria.  
+* Reconocer las principales características acústicas presentes durante la respiración y el habla.  
+* Implementar un sistema de adquisición de datos con una ESP32 y un micrófono KY-038 para capturar las variaciones de sonido generadas por el sujeto.  
 * Procesar y analizar la señal adquirida en Python para obtener el patrón y la frecuencia respiratoria.  
-* Identificar los cambios que se presentan en el patrón respiratorio cuando el sujeto se encuentra en reposo y cuando está hablando.  
-
+* Identificar los cambios que se presentan en la señal cuando el sujeto se encuentra en reposo y cuando está hablando.   
 ### Metodología  
-Para el desarrollo de esta práctica se implementó un sistema de adquisición de la señal respiratoria utilizando una placa ESP32 y un sensor de dióxido de carbono (CO₂). Este tipo de sistema permite registrar las variaciones en la concentración de CO₂ presentes en el aire exhalado durante la respiración, las cuales pueden relacionarse con el patrón respiratorio y utilizarse para estimar la frecuencia respiratoria [1].  
+Para el desarrollo de esta práctica se implementó un sistema de adquisición de la señal respiratoria utilizando una placa ESP32 y un micrófono KY-038. Este sistema permite registrar las variaciones de intensidad del sonido producidas durante la respiración y el habla, las cuales pueden emplearse para identificar el patrón respiratorio y estimar la frecuencia respiratoria mediante el procesamiento de la señal [1].  
 
-El principio de funcionamiento del sistema se basa en que el aire exhalado contiene una concentración de dióxido de carbono considerablemente mayor que el aire ambiente. Debido a esto, cuando una persona exhala cerca del sensor, este detecta el incremento en la concentración de CO₂ y genera una variación en su señal de salida. Durante la inhalación ocurre el efecto contrario, ya que disminuye la cantidad de CO₂ detectada, permitiendo obtener una señal que representa los ciclos respiratorios [2].  
+El principio de funcionamiento del sistema se basa en que el micrófono KY-038 convierte las ondas sonoras en una señal eléctrica analógica. Durante la respiración se generan sonidos de baja intensidad asociados al flujo de aire durante la inhalación y la exhalación, mientras que al hablar se producen señales de mayor amplitud y contenido frecuencial debido a la vibración de las cuerdas vocales. Estas diferencias permiten distinguir ambos estados mediante el análisis de la señal registrada [2].
 
-Antes de iniciar la adquisición de datos, se realizó el montaje del sistema conectando el sensor de CO₂ a la placa ESP32 de acuerdo con las especificaciones del fabricante y verificando que todas las conexiones eléctricas fueran correctas. Posteriormente, el sensor se ubicó a una distancia corta de la nariz y la boca del sujeto de prueba, procurando que el aire exhalado llegara directamente al elemento sensor sin necesidad de contacto físico, lo que permitió registrar las variaciones producidas durante cada respiración [2].  
+Antes de iniciar la adquisición de datos, se realizó el montaje del sistema conectando el micrófono KY-038 a la placa ESP32 de acuerdo con las especificaciones del módulo y verificando que todas las conexiones eléctricas fueran correctas. Posteriormente, el micrófono se ubicó a una distancia corta de la nariz y la boca del sujeto de prueba, procurando captar con claridad los sonidos generados durante la respiración y el habla sin que existiera contacto físico entre el sensor y el sujeto. Esta disposición permitió registrar las variaciones acústicas producidas durante cada ciclo respiratorio y durante la verbalización [2].  
 
-Con el montaje terminado, el sujeto permaneció en reposo para reducir movimientos que pudieran afectar la medición. Durante la práctica se realizaron mediciones tanto en condición de reposo como durante una actividad de verbalización, permitiendo obtener señales respiratorias bajo diferentes condiciones fisiológicas para su posterior análisis. Estas mediciones se realizaron manteniendo una distancia similar entre el sensor y el sujeto durante toda la adquisición, con el fin de disminuir posibles variaciones asociadas a la posición del sensor y mejorar la consistencia de los datos registrados [1], [2].  
-
-
+Con el montaje terminado, el sujeto permaneció inicialmente en reposo para reducir movimientos que pudieran afectar la adquisición de la señal. Posteriormente, se realizaron mediciones tanto en condición de reposo como durante una actividad de verbalización, permitiendo obtener registros bajo diferentes condiciones para su posterior análisis. Durante todas las pruebas se mantuvo una distancia similar entre el micrófono y el sujeto, con el fin de reducir variaciones en la intensidad de la señal debidas a cambios de posición y mejorar la consistencia de los datos registrados [1], [2].  
 ### Discusión   
 1. ¿Son los patrones respiratorios y las frecuencias respiratorias iguales o diferentes en cada caso? ¿A qué se debe esto?
 
