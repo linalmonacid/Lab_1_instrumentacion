@@ -22,6 +22,7 @@ El principio de funcionamiento del sistema se basa en que el micrófono KY-038 c
 Antes de iniciar la adquisición de datos, se realizó el montaje del sistema conectando el micrófono KY-038 a la placa ESP32 de acuerdo con las especificaciones del módulo y verificando que todas las conexiones eléctricas fueran correctas. Posteriormente, el micrófono se ubicó a una distancia corta de la nariz y la boca del sujeto de prueba, procurando captar con claridad los sonidos generados durante la respiración y el habla sin que existiera contacto físico entre el sensor y el sujeto. Esta disposición permitió registrar las variaciones acústicas producidas durante cada ciclo respiratorio y durante la verbalización [2].  
 
 Con el montaje terminado, el sujeto permaneció inicialmente en reposo para reducir movimientos que pudieran afectar la adquisición de la señal. Posteriormente, se realizaron mediciones tanto en condición de reposo como durante una actividad de verbalización, permitiendo obtener registros bajo diferentes condiciones para su posterior análisis. Durante todas las pruebas se mantuvo una distancia similar entre el micrófono y el sujeto, con el fin de reducir variaciones en la intensidad de la señal debidas a cambios de posición y mejorar la consistencia de los datos registrados [1], [2].  
+### Codigo
 
 ### Resultados
 <img width="713" height="447" alt="image" src="https://github.com/user-attachments/assets/d6faf912-af18-4221-906e-5eaf229257cc" />
@@ -34,6 +35,8 @@ Durante la adquisición de datos fue necesario utilizar tapabocas, lo que produj
 A pesar de estas limitaciones, se observa que la respiración durante el habla la señal presenta una mayor amplitud y variabilidad en comparación con la respiración en reposo, comportamiento esperado debido a la producción de la voz y a la modificación del flujo respiratorio durante el habla.
 
 <img width="690" height="441" alt="image" src="https://github.com/user-attachments/assets/1fa9773d-adda-409a-a649-46db494831d3" />
+
+En esta imagen podemos observar la figura 3 y 4 donde en reposo se identifica una componente dominante alrededor de 0.20 Hz, mientras que la respiración durante el habla aparecen varios picos distribuidos en el espectro, indicando que la energía de la señal ya no está concentrada únicamente en la frecuencia respiratoria sino también en las frecuencias gebneradas por la voz.
 
 
 ### Discusión   
