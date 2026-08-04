@@ -22,6 +22,18 @@ El principio de funcionamiento del sistema se basa en que el micrófono KY-038 c
 Antes de iniciar la adquisición de datos, se realizó el montaje del sistema conectando el micrófono KY-038 a la placa ESP32 de acuerdo con las especificaciones del módulo y verificando que todas las conexiones eléctricas fueran correctas. Posteriormente, el micrófono se ubicó a una distancia corta de la nariz y la boca del sujeto de prueba, procurando captar con claridad los sonidos generados durante la respiración y el habla sin que existiera contacto físico entre el sensor y el sujeto. Esta disposición permitió registrar las variaciones acústicas producidas durante cada ciclo respiratorio y durante la verbalización [2].  
 
 Con el montaje terminado, el sujeto permaneció inicialmente en reposo para reducir movimientos que pudieran afectar la adquisición de la señal. Posteriormente, se realizaron mediciones tanto en condición de reposo como durante una actividad de verbalización, permitiendo obtener registros bajo diferentes condiciones para su posterior análisis. Durante todas las pruebas se mantuvo una distancia similar entre el micrófono y el sujeto, con el fin de reducir variaciones en la intensidad de la señal debidas a cambios de posición y mejorar la consistencia de los datos registrados [1], [2].  
+
+### Resultados
+<img width="713" height="447" alt="image" src="https://github.com/user-attachments/assets/d6faf912-af18-4221-906e-5eaf229257cc" />
+# figura 1 y 2 respieracion en reposo y duarnte el habla
+
+
+
+
+Las Figuras 1 muestran las señales registradas durante la respiración en reposo y la respiración durante el habla, respectivamente. Aunque fue posible adquirir la señal mediante el micrófono KY-038 y diferenciar ambas condiciones, la calidad de los registros se vio afectada por la presencia de ruido.
+Durante la adquisición de datos fue necesario utilizar tapabocas, lo que produjo turbulencias en el flujo de aire cerca del micrófono y modificó las características acústicas de la respiración. Adicionalmente, el ambiente presentaba diferentes fuentes de ruido que fueron captadas por el sensor, generando fluctuaciones que dificultaron la identificación clara de cada ciclo respiratorio.
+A pesar de estas limitaciones, se observa que la respiración durante el habla la señal presenta una mayor amplitud y variabilidad en comparación con la respiración en reposo, comportamiento esperado debido a la producción de la voz y a la modificación del flujo respiratorio durante el habla.
+
 ### Discusión   
 1. ¿Son los patrones respiratorios y las frecuencias respiratorias iguales o diferentes en cada caso? ¿A qué se debe esto?
 
