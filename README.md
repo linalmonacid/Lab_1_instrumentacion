@@ -41,8 +41,11 @@ En general, la elección entre utilizar uno o varios sensores dependerá de la a
 ### Conclusiones  
 
 ### Referencias  
-[1] Hall, J. E. (2021). Guyton y Hall. Tratado de fisiología médica (14.ª ed.). Elsevier. https://www.elsevier.com/books/guyton-and-hall-textbook-of-medical-physiology/hall/978-0-323-59712-8. 
 
-[2] Universidad Militar Nueva Granada. (2025). Guía de práctica de laboratorio: Monitoreo del patrón y frecuencia respiratoria.   
+[1] Sauter, T. (2021). The ESP32: A powerful IoT microcontroller. Springer. https://link.springer.com/book/10.1007/978-1-4842-6717-7. 
 
-[3] Webster, J. G., & Clark, J. W. (2010). Medical Instrumentation: Application and Design (4th ed.). John Wiley & Sons. https://www.wiley.com/en-us/Medical+Instrumentation:+Application+and+Design,+4th+Edition-p-9780471676003. 
+[2] Joy-IT. (s. f.). KY-038 Microphone Sensor Module – Technical Manual. https://joy-it.net/files/files/Produkte/KY-038/KY-038_Manual_2020-09-16.pdf.  
+
+[3] Universidad Militar Nueva Granada. (2025). Guía de práctica de laboratorio: Monitoreo del patrón y frecuencia respiratoria.   
+
+
