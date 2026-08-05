@@ -95,6 +95,13 @@ Diferencia: -4.50 RPM
 
 Los resultados permitieron observar una diferencia entre ambas condiciones. En reposo se registró una mayor frecuencia respiratoria y un patrón relativamente más regular, mientras que durante el habla se obtuvo una frecuencia menor y una señal más irregular. A pesar de que las gráficas no presentaron exactamente las formas esperadas, el sistema permitió reconocer cambios relacionados con la verbalización.  
 
+### Ventajas
+El sistema desarrollado tiene como principales ventajas su bajo costo, facilidad de implementación y portabilidad, debido a que utiliza un micrófono KY, una ESP32 y herramientas de fácil acceso como Arduino IDE y MATLAB. Además, permite adquirir y visualizar la señal en tiempo real, guardar los datos para analizarlos posteriormente y comparar el comportamiento respiratorio en reposo y durante el habla. El uso de un micrófono dentro del tapabocas también resulta poco invasivo y permite detectar los sonidos producidos por la inhalación y la exhalación sin colocar sensores directamente sobre el tórax. Estudios similares han demostrado que los micrófonos instalados en mascarillas pueden utilizarse para estimar la frecuencia respiratoria a partir de los sonidos de la respiración.  
+
+### Limitaciones  
+La principal limitación es que el micrófono no mide directamente el flujo de aire ni el movimiento del tórax, sino los sonidos relacionados con la respiración. Por esta razón, la señal puede verse afectada por la voz, el ruido ambiental, el roce del tapabocas y los movimientos de la persona. En esta práctica también influyeron la conexión soldada parcialmente suelta y el ruido presente durante la calibración, lo que pudo generar lecturas inestables y modificar la frecuencia calculada.  
+
+Asimismo, los filtros y umbrales fueron ajustados experimentalmente para una sola persona, por lo que el sistema no puede considerarse un equipo clínico ni utilizarse para diagnosticar patologías sin realizar pruebas con más participantes y compararlo con un instrumento de referencia. Los sistemas acústicos requieren una buena relación entre la señal respiratoria y el ruido para lograr estimaciones confiables, mientras que la combinación con otros sensores puede mejorar la estabilidad y la identificación del patrón respiratorio.
 
 
 ### Discusión   
