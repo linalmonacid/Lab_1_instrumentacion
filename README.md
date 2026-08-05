@@ -56,20 +56,45 @@ Finalmente, en MATLAB se configuró la comunicación serial con la ESP32 mediant
 ### Resultados  
 En esta sección se presentan las señales obtenidas mediante el sistema de adquisición desarrollado, tanto durante la respiración en reposo como durante el habla. Los resultados incluyen las gráficas observadas en MATLAB durante 30 segundos. A partir de estas señales se analizaron los cambios en la amplitud, la forma y la regularidad del patrón respiratorio, así como las posibles diferencias producidas por la verbalización.  
 
-En la primera gráfica se presentan las señales respiratorias obtenidas en condiciones de reposo y durante el habla. En reposo, la señal mostró variaciones relativamente suaves y varios ciclos reconocibles a lo largo del registro. Aunque el comportamiento no fue completamente periódico, se observaron aumentos y descensos que pueden relacionarse con las fases de inhalación y exhalación.  
+En la señal registrada durante la respiración en reposo se observaron variaciones suaves, con aumentos y descensos que pueden relacionarse con los ciclos de inhalación y exhalación. Aunque la forma de la señal no fue completamente periódica ni presentó una onda tan definida como la esperada, sí fue posible reconocer varios cambios repetitivos a lo largo del registro. Esto indica que el sistema logró detectar parte de las variaciones acústicas generadas por la respiración.  
 
-<img width="713" height="447" alt="image" src="https://github.com/user-attachments/assets/d6faf912-af18-4221-906e-5eaf229257cc" />
+<img width="881" height="286" alt="image" src="https://github.com/user-attachments/assets/742225a7-b4a8-4e3f-85c2-d00030026cff" />  
 
 
-Las Figuras 1 y 2 muestran las señales registradas durante la respiración en reposo y la respiración durante el habla, respectivamente. Aunque fue posible adquirir la señal mediante el micrófono KY-038 y diferenciar ambas condiciones, la calidad de los registros se vio afectada por la presencia de ruido y una falla 
+Al aplicar la Transformada Rápida de Fourier a la señal de reposo, se obtuvo una frecuencia dominante de 0,200 Hz, equivalente a una frecuencia respiratoria de 12 respiraciones por minuto. Este resultado es coherente con lo observado en la gráfica temporal, ya que se distinguen varios ciclos respiratorios durante el intervalo analizado. Por lo tanto, puede considerarse que el sistema fue capaz de estimar una frecuencia respiratoria razonable en esta condición.  
+<img width="1056" height="340" alt="image" src="https://github.com/user-attachments/assets/36b1874f-a889-4b94-b018-2dbc220f2285" />  
 
-Durante la adquisición de datos fue necesario utilizar tapabocas, lo que produjo turbulencias en el flujo de aire cerca del micrófono y modificó las características acústicas de la respiración. Adicionalmente, el ambiente presentaba diferentes fuentes de ruido que fueron captadas por el sensor, generando fluctuaciones que dificultaron la identificación clara de cada ciclo respiratorio.
+Sin embargo, la señal también presentó variaciones irregulares y cambios de amplitud que no corresponden claramente a un ciclo respiratorio. Estas alteraciones pudieron deberse al ruido del ambiente, al movimiento del tapabocas, al roce del micrófono con la tela y a pequeñas modificaciones en la posición del sensor con respecto a la nariz y la boca. Como el micrófono registraba sonidos y no directamente el flujo de aire, cualquier sonido cercano podía mezclarse con la respiración y afectar la forma final de la señal.  
 
-A pesar de estas limitaciones, se observa que la respiración durante el habla la señal presenta una mayor amplitud y variabilidad en comparación con la respiración en reposo, comportamiento esperado debido a la producción de la voz y a la modificación del flujo respiratorio durante el habla.
+Otro factor importante fue el estado físico del micrófono. Durante la práctica se observó que una de las conexiones soldadas se encontraba parcialmente suelta. Esto pudo producir un contacto eléctrico inestable y provocar cambios repentinos en las mediciones, pérdida momentánea de información o valores de amplitud diferentes aun cuando la respiración de la persona no hubiera cambiado. Esta condición puede explicar por qué algunos ciclos aparecen más marcados que otros y por qué la gráfica no presenta una forma uniforme.  
 
-<img width="690" height="441" alt="image" src="https://github.com/user-attachments/assets/1fa9773d-adda-409a-a649-46db494831d3" />
+A pesar de estas limitaciones, el resultado obtenido en reposo fue útil, ya que permitió identificar una frecuencia dominante clara y reconocer un comportamiento relativamente repetitivo. Por esta razón, se puede afirmar que el sistema funcionó de manera parcial: logró detectar el patrón respiratorio general, aunque la calidad de la señal estuvo limitada por el ruido, la ubicación del sensor y la conexión inestable del micrófono.  
 
-En esta imagen podemos observar la figura 3 y 4 donde en reposo se identifica una componente dominante alrededor de 0.20 Hz, mientras que la respiración durante el habla aparecen varios picos distribuidos en el espectro, indicando que la energía de la señal ya no está concentrada únicamente en la frecuencia respiratoria sino también en las frecuencias gebneradas por la voz.
+Luego se obtuvo la señaldurante el habla donde se observó un comportamiento más irregular que en reposo, la amplitud presentó aumentos y descensos de diferente duración, sin conservar un patrón claramente periódico. Este resultado era esperado en cierta medida, ya que al hablar la persona modifica su respiración para poder pronunciar palabras y frases.
+
+<img width="1014" height="345" alt="image" src="https://github.com/user-attachments/assets/021b9385-45ce-4ab5-ab3e-674272c7cbd0" />  
+
+Además, en esta condición el micrófono recibió al mismo tiempo los sonidos de la respiración y los sonidos producidos por el habla. Como la voz suele tener una intensidad mayor que los sonidos respiratorios, pudo dominar la medición y dificultar la identificación precisa de las inhalaciones y exhalaciones. Por esta razón, la señal obtenida representa una combinación entre respiración, voz, movimientos del tapabocas y ruido del entorno, y no exclusivamente el patrón respiratorio.  
+
+<img width="1048" height="341" alt="image" src="https://github.com/user-attachments/assets/37b76e0a-7033-4fe8-8d0b-142ca6bb21a1" />  
+
+En el análisis de frecuencia se obtuvo una frecuencia dominante de 0,125 Hz, equivalente a 7,5 respiraciones por minuto. Este valor fue menor que el encontrado en reposo. Es posible que durante el habla la persona realizó inhalaciones más separadas y exhalaciones más prolongadas para completar palabras o frases. En ese caso, se presentarían menos ciclos respiratorios completos durante el mismo intervalo de medición.
+
+El problema de la conexión parcialmente suelta también pudo afectar con mayor intensidad esta prueba, durante el habla se producen pequeños movimientos en el tapabocas, la mandíbula y el rostro, los cuales pudieron mover el micrófono o la zona soldada. Si el contacto eléctrico cambiaba durante estos movimientos, la señal podía presentar aumentos o caídas que no correspondían realmente a cambios respiratorios. También la calibración inicial también pudo verse afectada por estas interferencias. Durante esta etapa, el sistema calculó un nivel de referencia mientras la persona permanecía en silencio, pero usualmente había ruido ambiental, movimiento del tapabocas o un contacto irregular en la soldadura, el valor de referencia pudo quedar desplazado. Como las lecturas posteriores fueron comparadas con ese valor, una calibración inadecuada pudo causar que la señal respiratoria apareciera desplazada, con amplitudes mayores o menores de las esperadas.  
+
+A pesar de estos inconvenientes, la señal durante el habla sí mostró un comportamiento diferente al observado en reposo. Se identificaron cambios más abruptos, amplitudes variables y una menor regularidad, lo cual permite evidenciar que la verbalización modifica el patrón registrado por el sistema.  
+
+========== RESULTADOS ==========  
+REPOSO   
+Frecuencia dominante: 0.200 Hz   
+Frecuencia respiratoria: 12.00 RPM  
+HABLANDO   
+Frecuencia dominante: 0.125 Hz  
+Frecuencia respiratoria: 7.50 RPM   
+Diferencia: -4.50 RPM
+
+Los resultados permitieron observar una diferencia entre ambas condiciones. En reposo se registró una mayor frecuencia respiratoria y un patrón relativamente más regular, mientras que durante el habla se obtuvo una frecuencia menor y una señal más irregular. A pesar de que las gráficas no presentaron exactamente las formas esperadas, el sistema permitió reconocer cambios relacionados con la verbalización.  
+
 
 
 ### Discusión   
