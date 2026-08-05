@@ -100,14 +100,12 @@ Los resultados permitieron observar una diferencia entre ambas condiciones. En r
 ### Discusión   
 1. ¿Son los patrones respiratorios y las frecuencias respiratorias iguales o diferentes en cada caso? ¿A qué se debe esto?
 
-No, los patrones respiratorios y la frecuencia respiratoria no fueron iguales en las dos condiciones evaluadas (reposo y verbalización). Durante el reposo se observó una respiración más constante y periódica, con ciclos de inhalación y exhalación relativamente uniformes. En cambio, durante la verbalización el patrón respiratorio presentó cambios debido a que el sujeto debía coordinar la respiración con el habla, generando exhalaciones más prolongadas e inhalaciones más cortas y menos frecuentes [1].  
+Los patrones y las frecuencias respiratorias fueron diferentes en cada condición. En reposo se obtuvo un patrón relativamente regular y una frecuencia de 12 respiraciones por minuto, mientras que durante el habla la señal fue más irregular y la frecuencia disminuyó a 7,5 respiraciones por minuto. Fisiológicamente, esto ocurre porque al hablar la respiración se adapta a la producción de la voz: la persona suele inhalar antes de comenzar una frase y después realiza una exhalación más larga y controlada para pronunciar las palabras. Además, la duración de las frases, las pausas y la intensidad de la voz modifican el momento y la profundidad de las inhalaciones [8]. En los resultados también pudieron influir el ruido ambiental, la calibración y la conexión parcialmente suelta del micrófono.  
 
-
-Estas diferencias se deben a que la respiración no solo cumple la función de realizar el intercambio de gases, sino que también participa en la producción de la voz. Cuando una persona habla, el sistema respiratorio adapta el ritmo respiratorio para suministrar el flujo de aire necesario durante la fonación, modificando temporalmente la frecuencia y el patrón normal de respiración [2]. Por esta razón, es esperado que las señales respiratorias obtenidas durante la verbalización presenten un comportamiento diferente al registrado en reposo.  
 
 2. ¿Cuáles serían las ventajas y desventajas de emplear múltiples sensores para el monitoreo del proceso respiratorio? ¿Cuáles podrían ser las razones?
 
-El uso de múltiples sensores puede mejorar la calidad del monitoreo respiratorio, ya que permite obtener información desde diferentes variables fisiológicas. Por ejemplo, un sensor de CO₂ puede complementarse con sensores de flujo de aire, temperatura o movimiento torácico para obtener una descripción más completa del proceso respiratorio y aumentar la confiabilidad de las mediciones.  
+El uso de múltiples sensores tendría como ventaja obtener información complementaria y más confiable del proceso respiratorio. Por ejemplo, el micrófono podría captar los sonidos, una banda torácica medir el movimiento del pecho y un sensor de flujo detectar el aire inhalado y exhalado. La combinación de estas señales permitiría confirmar cada respiración, diferenciar mejor la voz del movimiento respiratorio y mantener la medición cuando uno de los sensores presente ruido o una falla [9]. 
 
 Sin embargo, utilizar varios sensores también presenta algunas desventajas. En primer lugar, aumenta el costo del sistema y la complejidad del montaje. Además, es necesario sincronizar correctamente las señales obtenidas por cada sensor para evitar errores durante el análisis. También puede resultar menos cómodo para el usuario si se requiere colocar varios dispositivos sobre el cuerpo, lo que podría afectar la naturalidad de la respiración y, por lo tanto, influir en los resultados obtenidos.  
 
@@ -128,6 +126,10 @@ En general, la elección entre utilizar uno o varios sensores dependerá de la a
 [6] MathWorks. (s. f.). rms: Root mean square value. https://www.mathworks.com/help/matlab/ref/rms.html  
 
 [7] MathWorks. (s. f.). serialport: Connection to serial port. https://www.mathworks.com/help/matlab/ref/serialport.html  
+
+[8] Binazzi, B., Lanini, B., Bianchi, R., Romagnoli, I., Nerini, M., Gigliotti, F., & Scano, G. (2006). Breathing pattern and kinematics in normal subjects during speech, singing and loud whispering. Acta Physiologica, 186(3), 233–246. https://pubmed.ncbi.nlm.nih.gov/16497202/
+
+[9] Moon, K. S., Choi, H., & Lee, S. (2023). A wearable multimodal wireless sensing system for respiratory pattern monitoring. Sensors, 23. https://pmc.ncbi.nlm.nih.gov/articles/PMC10422350/
 
 
 
