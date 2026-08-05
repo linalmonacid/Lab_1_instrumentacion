@@ -58,9 +58,10 @@ En esta sección se presentan las señales obtenidas mediante el sistema de adqu
 
 En la señal registrada durante la respiración en reposo se observaron variaciones suaves, con aumentos y descensos que pueden relacionarse con los ciclos de inhalación y exhalación. Aunque la forma de la señal no fue completamente periódica ni presentó una onda tan definida como la esperada, sí fue posible reconocer varios cambios repetitivos a lo largo del registro. Esto indica que el sistema logró detectar parte de las variaciones acústicas generadas por la respiración. 
 
-<b>Figura 1.</b> Señal respiratoria obtenida durante la respiración en reposo
 
 <img width="881" height="286" alt="image" src="https://github.com/user-attachments/assets/742225a7-b4a8-4e3f-85c2-d00030026cff" />  
+
+<b>Figura 1.</b> Señal respiratoria obtenida durante la respiración en reposo
 
 
 Al aplicar la Transformada Rápida de Fourier a la señal de reposo, se obtuvo una frecuencia dominante de 0,200 Hz, equivalente a una frecuencia respiratoria de 12 respiraciones por minuto. Este resultado es coherente con lo observado en la gráfica temporal, ya que se distinguen varios ciclos respiratorios durante el intervalo analizado. Por lo tanto, puede considerarse que el sistema fue capaz de estimar una frecuencia respiratoria razonable en esta condición.  
