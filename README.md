@@ -4,25 +4,51 @@ Lina María Cortes Almonacid
 Karen Dayanna Mora Segura  
 Sofia Alejandra Cardona Cruz     
 
-En la presente práctica de laboratorio se realizó el monitoreo del proceso respiratorio mediante la adquisición de las variaciones de sonido producidas durante la respiración y el habla, utilizando un sistema de adquisición de datos basado en una placa ESP32 y un micrófono KY-038. Durante el ciclo respiratorio, la entrada y salida de aire generan pequeñas variaciones acústicas que pueden ser detectadas por el micrófono, mientras que al hablar se producen ondas sonoras de mayor amplitud y frecuencia debido a la vibración de las cuerdas vocales. Estas diferencias permiten distinguir entre los distintos estados respiratorios y el habla, convirtiendo al micrófono en un sensor adecuado para registrar el comportamiento de la señal respiratoria. Con este sistema se capturaron las variaciones de la señal, las cuales se visualizaron inicialmente en el entorno de Arduino IDE, para posteriormente procesar los datos en Python con el fin de graficar y analizar su comportamiento bajo diferentes condiciones respiratorias. A partir de este análisis fue posible identificar el patrón respiratorio, estimar la frecuencia respiratoria y observar sus variaciones según la actividad del sujeto, comprendiendo así el funcionamiento básico de un sistema de adquisición de señales biomédicas y la relación entre las variaciones acústicas y el proceso fisiológico de la respiración.  
-### Objetivo General  
-Evaluar la influencia del habla sobre el patrón y la frecuencia respiratoria mediante el desarrollo de un sistema de adquisición de datos utilizando una ESP32 y un micrófono KY-038, así como el procesamiento de la señal obtenida para su posterior análisis.   
+En esta práctica se desarrolló un sistema para monitorear el patrón respiratorio de una persona en reposo y durante el habla, con el propósito de observar cómo la verbalización modifica la forma y la frecuencia de la respiración. Para la adquisición se utilizó un micrófono KY instalado dentro de un tapabocas y conectado a una ESP32, la cual registró las variaciones de sonido producidas durante la inhalación, la exhalación y el habla. La señal fue procesada mediante filtros y cálculos de energía para reducir el ruido y diferenciar aproximadamente entre silencio, respiración y voz, siguiendo el objetivo planteado en la guía de comparar ambas condiciones respiratorias [1].  
 
+Posteriormente, los datos fueron enviados por comunicación serial a MATLAB, donde se realizó una captura temporizada de 30 segundos, se almacenaron en archivos .mat y se representaron gráficamente. Aunque las señales obtenidas no presentaron completamente las formas esperadas, sí permitieron identificar cambios de amplitud y comportamiento entre la respiración en reposo y durante el habla. Las diferencias observadas pudieron estar relacionadas con el ruido del ambiente, la sensibilidad y ubicación del micrófono, el ajuste de los filtros y las variaciones naturales de la respiración del sujeto.  
+### Objetivo General  
+Evaluar la influencia del habla sobre el patrón y la frecuencia respiratoria mediante un sistema de adquisición basado en un micrófono KY, una ESP32 y MATLAB, comparando las señales obtenidas en condiciones de reposo y durante la verbalización.  
 
 ### Objetivos específicos  
-* Reconocer las principales características acústicas presentes durante la respiración y el habla.  
-* Implementar un sistema de adquisición de datos con una ESP32 y un micrófono KY-038 para capturar las variaciones de sonido generadas por el sujeto.  
-* Procesar y analizar la señal adquirida en Python para obtener el patrón y la frecuencia respiratoria.  
-* Identificar los cambios que se presentan en la señal cuando el sujeto se encuentra en reposo y cuando está hablando.   
+- Reconocer las variaciones físicas y acústicas producidas durante la inhalación, la exhalación y el habla.  
+- Diseñar e implementar un sistema capaz de adquirir la señal respiratoria mediante un micrófono KY conectado a una ESP32.  
+- Procesar y filtrar la señal adquirida para reducir el ruido y facilitar la identificación del patrón respiratorio.  
+- Capturar, almacenar y representar gráficamente en MATLAB las señales obtenidas durante 30 segundos en reposo y durante el habla.  
+- Comparar el comportamiento y la frecuencia de las señales respiratorias obtenidas en ambas condiciones, identificando las diferencias producidas por la verbalización.  
 ### Metodología  
-Para el desarrollo de esta práctica se implementó un sistema de adquisición de la señal respiratoria utilizando una placa ESP32 y un micrófono KY-038. Este sistema permite registrar las variaciones de intensidad del sonido producidas durante la respiración y el habla, las cuales pueden emplearse para identificar el patrón respiratorio y estimar la frecuencia respiratoria mediante el procesamiento de la señal [1].  
+La práctica se desarrolló mediante la construcción de un sistema básico para registrar los sonidos producidos por la respiración y observar sus cambios cuando la persona se encontraba en reposo y cuando hablaba. Para ello, se utilizó un micrófono KY como elemento sensor, una tarjeta ESP32 para adquirir y procesar la señal, y MATLAB para guardar y representar los datos. El procedimiento se dividió en las etapas de montaje del sistema, ubicación del sensor, adquisición de la señal, filtrado, transmisión serial, captura en MATLAB y comparación de los resultados. De acuerdo con la guía, se debían obtener registros separados en reposo y durante una tarea de verbalización, con una duración aproximada de 30 segundos para cada condición.  
 
-El principio de funcionamiento del sistema se basa en que el micrófono KY-038 convierte las ondas sonoras en una señal eléctrica analógica. Durante la respiración se generan sonidos de baja intensidad asociados al flujo de aire durante la inhalación y la exhalación, mientras que al hablar se producen señales de mayor amplitud y contenido frecuencial debido a la vibración de las cuerdas vocales. Estas diferencias permiten distinguir ambos estados mediante el análisis de la señal registrada [2].
+Se seleccionó un módulo de micrófono KY debido a que permite detectar cambios en el nivel del sonido del ambiente. En esta aplicación, el micrófono no midió directamente el volumen de aire que entraba o salía de los pulmones, sino las variaciones acústicas producidas durante la inhalación, la exhalación y el habla. Cuando una persona respira cerca del micrófono, el movimiento del aire y el sonido respiratorio producen pequeñas variaciones en la salida analógica del sensor. Durante el habla, estas variaciones suelen presentar una amplitud mayor y cambios más rápidos debido a la voz.  
 
-Antes de iniciar la adquisición de datos, se realizó el montaje del sistema conectando el micrófono KY-038 a la placa ESP32 de acuerdo con las especificaciones del módulo y verificando que todas las conexiones eléctricas fueran correctas. Posteriormente, el micrófono se ubicó a una distancia corta de la nariz y la boca del sujeto de prueba, procurando captar con claridad los sonidos generados durante la respiración y el habla sin que existiera contacto físico entre el sensor y el sujeto. Esta disposición permitió registrar las variaciones acústicas producidas durante cada ciclo respiratorio y durante la verbalización [2].  
+Después el micrófono se conectó a la ESP32 utilizando su salida analógica. Las conexiones realizadas fueron las siguientes:  
 
-Con el montaje terminado, el sujeto permaneció inicialmente en reposo para reducir movimientos que pudieran afectar la adquisición de la señal. Posteriormente, se realizaron mediciones tanto en condición de reposo como durante una actividad de verbalización, permitiendo obtener registros bajo diferentes condiciones para su posterior análisis. Durante todas las pruebas se mantuvo una distancia similar entre el micrófono y el sujeto, con el fin de reducir variaciones en la intensidad de la señal debidas a cambios de posición y mejorar la consistencia de los datos registrados [1], [2].  
-### Codigo
+- El pin de alimentación del micrófono se conectó a la salida de 3,3 V de la ESP32.  
+- El pin de tierra del micrófono se conectó a uno de los pines GND de la ESP32.  
+- La salida analógica del micrófono se conectó al pin GPIO 15 de la ESP32.  
+- La ESP32 se conectó al computador mediante un cable USB.  
+
+Antes de iniciar las pruebas, se verificó que todas las conexiones estuvieran firmes y que el micrófono estuviera alimentado correctamente. También se confirmó que la ESP32 fuera reconocida por el computador y que pudiera enviar información mediante el puerto serial, aunque existen sensores que permiten medir directamente el flujo de aire, el movimiento del tórax o la presión respiratoria, el micrófono KY fue empleado como una alternativa sencilla y de bajo costo para reconocer cambios relacionados con el patrón respiratorio.  
+
+Por otro lado, el micrófono fue colocado en un tapabocas utilizado por la persona participante. Se ubicó cerca de la nariz y la boca con el propósito de captar los sonidos producidos durante la inhalación, la exhalación y la verbalización, durante la colocación se trato que el módulo no bloqueara la entrada o salida del aire y que no estuviera en contacto directo con la boca, la posición del sensor se conservó durante las pruebas de reposo y habla. Esto permitió que las diferencias observadas se relacionaran principalmente con la condición evaluada y no con un cambio en la distancia entre el micrófono y la persona. La prueba se realizó en un ambiente lo más silencioso posible. Sin embargo, debido a la alta sensibilidad del micrófono, algunos sonidos del entorno, el movimiento del tapabocas y la fricción del sensor pudieron quedar registrados como interferencias.  
+
+La ESP32 se programó desde el entorno de Arduino IDE, en el código se configuró el pin GPIO 15 como entrada para leer la señal analógica entregada por el micrófono y la comunicación serial se configuró a una velocidad de 115200 baudios, utilizada tanto para observar las señales en el Serial Plotter como para enviar posteriormente los datos hacia MATLAB.  
+
+En la parte de la programación al iniar la adquisición de datos, se realizaba una calibración, durante este intervalo, la persona debía permanecer en silencio y evitar movimientos fuertes cerca del micrófono. La ESP32 tomó 1000 lecturas del sensor y calculó el promedio, este promedio fue utilizado como nivel de referencia, esta calibración fue necesaria porque la salida del micrófono no se encuentra normalmente en cero cuando no existe sonido. En su lugar, presenta un valor central sobre el cual aparecen pequeñas variaciones. Al calcular este nivel inicial, fue posible restarlo de las lecturas posteriores y trabajar principalmente con los cambios generados por la respiración y la voz.  
+
+La señal analógica del micrófono fue leída por la ESP32 cada 500 microsegundos. Esto corresponde a una frecuencia interna aproximada de:  
+<img width="420" height="85" alt="image" src="https://github.com/user-attachments/assets/38841e6e-b2fd-45e6-a2f1-cd3eaf1e5838" />  
+Por lo tanto, la ESP32 realizó aproximadamente 2000 lecturas por segundo. Esta velocidad permitió registrar las variaciones rápidas producidas por los sonidos respiratorios y la voz.
+
+Para obtener la señal respiratoria, primero se eliminó el nivel constante o componente DC presente en la salida del micrófono, con el fin de conservar principalmente las variaciones producidas por la respiración y la voz. Después, se calculó la energía de la señal mediante una ventana RMS, lo que permitió reducir cambios muy rápidos y obtener una medida más estable de la intensidad del sonido; las lecturas individuales del micrófono cambiaban rápidamente y podían presentar una forma irregular. Por esta razón, no se utilizaron directamente para representar la respiración. En su lugar, se calculó la energía RMS de grupos de 40 muestras. Como la ESP32 tomó 2000 muestras por segundo, una ventana de 40 muestras representó aproximadamente 20 milisegundos; por lo tanto, el valor RMS se actualizó aproximadamente 50 veces por segundo. Este cálculo permitió obtener una medida más estable de la intensidad del sonido y reducir parte de las variaciones rápidas presentes en la señal original.  
+
+A partir de este procesamiento se generaron dos señales: una destinada a representar la respiración y otra a identificar los cambios producidos por el habla, a la señal respiratoria se le aplicó un filtro pasa-bajas IIR de segundo orden, este filtro permitió obtener una señal más lenta y continua, de modo que las inhalaciones y exhalaciones fueran más fáciles de identificar, mientras que la señal del habla se configuró para responder rápidamente cuando la persona comenzaba a hablar y disminuir de manera gradual al terminar. Además, se realizó una clasificación aproximada entre silencio, respiración y habla, según la intensidad detectada por el micrófono.  
+
+Una vez comprobado el funcionamiento del sistema en el Serial Plotter de Arduino, se realizaron dos pruebas con el micrófono ubicado dentro del tapabocas y cerca de la nariz y la boca. En la primera prueba, la persona permaneció en reposo, respirando normalmente y evitando hablar o realizar movimientos que pudieran producir ruido. En la segunda prueba, la persona habló o leyó un texto mientras se registraban las variaciones de la señal. Durante ambas mediciones se mantuvo la misma posición del micrófono para que la comparación fuera más confiable. Finalmente, se observaron y compararon las señales obtenidas, esperando encontrar un comportamiento más suave y regular durante el reposo y una forma más irregular, con cambios rápidos y mayores variaciones durante el habla, tal como propone la guía para evaluar la influencia de la verbalización sobre el patrón respiratorio.  
+
+Finalmente, en MATLAB se configuró la comunicación serial con la ESP32 mediante el puerto COM6 y una velocidad de 115200 baudios. Luego se realizó la captura de la señal durante 30 segundos, almacenando cada dato recibido en un vector junto con su correspondiente tiempo. Finalmente, la información se guardó en un archivo .mat, se graficó la señal respiratoria en función del tiempo y se cerró la conexión serial.  
+
+
 
 ### Resultados
 <img width="713" height="447" alt="image" src="https://github.com/user-attachments/assets/d6faf912-af18-4221-906e-5eaf229257cc" />
@@ -58,11 +84,6 @@ En general, la elección entre utilizar uno o varios sensores dependerá de la a
 ### Conclusiones  
 
 ### Referencias  
-
-[1] Sauter, T. (2021). The ESP32: A powerful IoT microcontroller. Springer. https://link.springer.com/book/10.1007/978-1-4842-6717-7. 
-
-[2] Joy-IT. (s. f.). KY-038 Microphone Sensor Module – Technical Manual. https://joy-it.net/files/files/Produkte/KY-038/KY-038_Manual_2020-09-16.pdf.  
-
-[3] Universidad Militar Nueva Granada. (2025). Guía de práctica de laboratorio: Monitoreo del patrón y frecuencia respiratoria.   
+[1] Universidad Militar Nueva Granada. (2025). Guía de práctica de laboratorio: Monitoreo del patrón y frecuencia respiratoria.   
 
 
