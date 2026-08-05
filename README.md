@@ -69,6 +69,10 @@ En la señal registrada durante la respiración en reposo se observaron variacio
 Al aplicar la Transformada Rápida de Fourier a la señal de reposo, se obtuvo una frecuencia dominante de 0,200 Hz, equivalente a una frecuencia respiratoria de 12 respiraciones por minuto. Este resultado es coherente con lo observado en la gráfica temporal, ya que se distinguen varios ciclos respiratorios durante el intervalo analizado. Por lo tanto, puede considerarse que el sistema fue capaz de estimar una frecuencia respiratoria razonable en esta condición.  
 <img width="1056" height="340" alt="image" src="https://github.com/user-attachments/assets/36b1874f-a889-4b94-b018-2dbc220f2285" />  
 
+<p align="center">
+<b>Figura 1.</b> Frecuencia obtenida durante la respiración en reposo.
+</p>
+
 Sin embargo, la señal también presentó variaciones irregulares y cambios de amplitud que no corresponden claramente a un ciclo respiratorio. Estas alteraciones pudieron deberse al ruido del ambiente, al movimiento del tapabocas, al roce del micrófono con la tela y a pequeñas modificaciones en la posición del sensor con respecto a la nariz y la boca. Como el micrófono registraba sonidos y no directamente el flujo de aire, cualquier sonido cercano podía mezclarse con la respiración y afectar la forma final de la señal.  
 
 Otro factor importante fue el estado físico del micrófono. Durante la práctica se observó que una de las conexiones soldadas se encontraba parcialmente suelta. Esto pudo producir un contacto eléctrico inestable y provocar cambios repentinos en las mediciones, pérdida momentánea de información o valores de amplitud diferentes aun cuando la respiración de la persona no hubiera cambiado. Esta condición puede explicar por qué algunos ciclos aparecen más marcados que otros y por qué la gráfica no presenta una forma uniforme.  
@@ -79,9 +83,16 @@ Luego se obtuvo la señaldurante el habla donde se observó un comportamiento m�
 
 <img width="1014" height="345" alt="image" src="https://github.com/user-attachments/assets/021b9385-45ce-4ab5-ab3e-674272c7cbd0" />  
 
+<p align="center">
+<b>Figura 3.</b> Señal respiratoria obtenida por el habla.
+</p>
+
 Además, en esta condición el micrófono recibió al mismo tiempo los sonidos de la respiración y los sonidos producidos por el habla. Como la voz suele tener una intensidad mayor que los sonidos respiratorios, pudo dominar la medición y dificultar la identificación precisa de las inhalaciones y exhalaciones. Por esta razón, la señal obtenida representa una combinación entre respiración, voz, movimientos del tapabocas y ruido del entorno, y no exclusivamente el patrón respiratorio.  
 
 <img width="1048" height="341" alt="image" src="https://github.com/user-attachments/assets/37b76e0a-7033-4fe8-8d0b-142ca6bb21a1" />  
+<p align="center">
+<b>Figura 1.</b> frecuencia respiratoria obtenida por el habla.
+</p>
 
 En el análisis de frecuencia se obtuvo una frecuencia dominante de 0,125 Hz, equivalente a 7,5 respiraciones por minuto. Este valor fue menor que el encontrado en reposo. Es posible que durante el habla la persona realizó inhalaciones más separadas y exhalaciones más prolongadas para completar palabras o frases. En ese caso, se presentarían menos ciclos respiratorios completos durante el mismo intervalo de medición.
 
