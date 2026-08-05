@@ -53,7 +53,11 @@ Finalmente, en MATLAB se configuró la comunicación serial con la ESP32 mediant
 
 
 
-### Resultados
+### Resultados  
+En esta sección se presentan las señales obtenidas mediante el sistema de adquisición desarrollado, tanto durante la respiración en reposo como durante el habla. Los resultados incluyen las gráficas observadas en MATLAB durante 30 segundos. A partir de estas señales se analizaron los cambios en la amplitud, la forma y la regularidad del patrón respiratorio, así como las posibles diferencias producidas por la verbalización.  
+
+En la primera gráfica se presentan las señales respiratorias obtenidas en condiciones de reposo y durante el habla. En reposo, la señal mostró variaciones relativamente suaves y varios ciclos reconocibles a lo largo del registro. Aunque el comportamiento no fue completamente periódico, se observaron aumentos y descensos que pueden relacionarse con las fases de inhalación y exhalación.  
+
 <img width="713" height="447" alt="image" src="https://github.com/user-attachments/assets/d6faf912-af18-4221-906e-5eaf229257cc" />
 
 
